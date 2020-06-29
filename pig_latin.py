@@ -10,8 +10,11 @@ punc_list = ["?", "!", "."]
 while True:
     sentence = input("Enter a sentence to convert to pig latin:\n")
     punc_output = []
-    if sentence[-1] in punc_list:
-        punc_output.append(sentence[-1])
+    for punc in punc_list:
+        num = sentence.count(punc)
+        punc_output.append(punc * num)
+    #if sentence[-1] in punc_list:
+    #    punc_output.append(sentence[-1])
     sentence_fix = re.sub(r'[.!?\\-]','',sentence)
     words = sentence_fix.split()
     output = []
