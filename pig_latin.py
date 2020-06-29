@@ -3,10 +3,10 @@ import sys
 
 VOWELS = "aeiouy"
 # more entries to be added to DO_NOT_CHANGE to be added if needed
-DO_NOT_CHANGE = ["on", "the", "a", "an", "if", "and"]
+DO_NOT_CHANGE = ["on", "the", "a", "an", "if", "and", "are"]
 
 while True:
-    sentence = input("Enter a sentence to convert to pig latin:\n")
+    sentence = input("Enter a sentence to convert to pig latin (No punctuation, please!):\n")
     words = sentence.split()
     output = []
     for word in words:
